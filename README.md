@@ -1,24 +1,6 @@
-# creative3
+# Web based knapsack solver
 
-## Project setup
+## Credits
+Dan Ventura for explaining this approach to me during cs 312
+Dr. Clement for helping with web programming in CS 260
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
