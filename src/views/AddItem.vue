@@ -16,10 +16,15 @@
         <label for=""> Image Link (Optional):</label>
       </div>
       <div class="inputs">
-        <input type="text" name="" value="" v-model="name" />
-        <input type="number" name="" value="" v-model="weight" />
-        <input type="number" name="" value="" v-model="value" />
-        <input type="url" name="" value="" v-model="imageLink" />
+        <input type="text" placeholder="Chocolate" value="" v-model="name" />
+        <input type="number" placeholder="2" value="" v-model="weight" />
+        <input type="number" placeholder="7" value="" v-model="value" />
+        <input
+          type="url"
+          placeholder="www.example.com/image.png"
+          value=""
+          v-model="imageLink"
+        />
       </div>
     </div>
 
