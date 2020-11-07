@@ -29,6 +29,7 @@ export default {
 <style media="screen">
 .grid {
   display: flex;
+  justify-content: center;
 }
 
 .item {

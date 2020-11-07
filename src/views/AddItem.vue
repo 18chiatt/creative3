@@ -57,8 +57,8 @@ export default {
       //add to Cart
       let item = {
         name: this.name,
-        weight: this.weight,
-        value: this.value,
+        weight: parseInt(this.weight),
+        value: parseInt(this.value),
         imageLink: this.imageLink
       };
 
