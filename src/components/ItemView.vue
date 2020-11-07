@@ -30,12 +30,13 @@ export default {
 .grid {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .item {
   width: 20%;
   border: 2px solid blue;
-  margin: 3%;
+  margin: 1%;
   font-size: 20px;
 }
 

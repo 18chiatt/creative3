@@ -12,9 +12,11 @@
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
 * {
   background-color: #1d2d50;
   color: #ffffff;
+  font-family: "Open Sans", sans-serif;
 }
 
 #app {
@@ -23,6 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+button {
+  border-radius: 10px;
+  padding: 5px;
+  width: 25%;
+  font-weight: bold;
+}
+
+input {
+  color: #000000;
 }
 
 #nav {

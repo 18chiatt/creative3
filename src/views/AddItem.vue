@@ -109,7 +109,7 @@ export default {
 label {
   display: block;
   font-size: 30px;
-  margin-bottom: 42px;
+  margin-bottom: 35px;
 }
 label:first-of-type {
   margin-top: 20px;
@@ -124,8 +124,10 @@ label:first-of-type {
 }
 
 input {
-  width: 100%;
+  width: 65%;
   height: 30px;
   margin: 20px 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 </style>
