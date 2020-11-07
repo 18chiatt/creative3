@@ -6,8 +6,7 @@ Vue.config.productionTip = false
 
 let data = {
   products:[],
-  weight:0,
-  result:[],
+
 }
 
 new Vue({

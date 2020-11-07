@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Explination</router-link> |
+      <router-link to="/">Explanation</router-link> |
       <router-link to="/AddItems">Add Items</router-link> |
       <router-link to="/viewItems">View Items</router-link> |
       <router-link to="/Solve">Solve</router-link>
     </div>
+    <hr class="headerruler" />
     <router-view />
   </div>
 </template>
@@ -26,6 +27,10 @@
 
 #nav {
   padding: 30px;
+}
+
+.headerruler {
+  width: 50%;
 }
 .nav {
   font-size: 60px;
