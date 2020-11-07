@@ -3,11 +3,19 @@
     <h2>No Items</h2>
   </div>
   <div class="grid" v-else>
-    <div class="item" v-for="item in products" v-bind:key="item.name">
+    <div
+      class="item"
+      v-for="item in products"
+      v-show="item.count == null || item.count > 0"
+      v-bind:key="item.name"
+    >
       <img :src="item.imageLink" alt="" />
       <p>Name: {{ item.name }}</p>
       <p>Weight: {{ item.weight }}</p>
       <p>value: {{ item.value }}</p>
+      <p v-show="item.count != null && item.count > 0">
+        Count: {{ item.count }}
+      </p>
     </div>
   </div>
 </template>

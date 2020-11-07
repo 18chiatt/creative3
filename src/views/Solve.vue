@@ -37,7 +37,8 @@ export default {
   },
   methods: {
     solve: function() {
-      let products = this.$root.$data.products;
+      let products = JSON.parse(JSON.stringify(this.$root.$data.products));
+
       if (products.length === 0) {
         this.message = "Please add items";
         return;
@@ -47,7 +48,10 @@ export default {
         this.message = "Please input a weight";
         return;
       }
-
+      for (let i = 0; i < products.length; i++) {
+        products[i].index = i;
+        products[i].count = 0;
+      }
       let weight = parseInt(this.maxWeight);
       let values = [0];
       let itemAtWeight = [[]];
@@ -58,8 +62,6 @@ export default {
 
         for (let item of products) {
           if (parseInt(item.weight) <= i) {
-            console.log(item.value + values[i - parseInt(item.weight)]);
-
             if (
               parseInt(item.value) + values[i - parseInt(item.weight)] >
               parseInt(currMaxVal)
@@ -75,7 +77,6 @@ export default {
           values.push(0);
           continue;
         }
-        console.log(currBestItem);
 
         itemAtWeight.push(
           itemAtWeight[i - parseInt(currBestItem.weight)].concat([currBestItem])
@@ -84,9 +85,12 @@ export default {
           parseInt(currMaxVal) + parseInt(values[i - currBestItem.weight])
         );
       }
+      let result = itemAtWeight[weight];
+      for (let item of result) {
+        products[item.index].count += 1;
+      }
 
-      console.log(values);
-      this.results = itemAtWeight[weight];
+      this.results = products;
       this.solved = true;
       this.maxValue = values[weight];
       this.message = "Solved: Optimal solution has value " + this.maxValue;

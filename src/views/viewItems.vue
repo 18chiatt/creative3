@@ -1,5 +1,6 @@
 <template>
   <div class="holder">
+    <button v-on:click="clear()">Clear Items</button>
     <ItemView :products="this.products"></ItemView>
     <Footer></Footer>
   </div>
@@ -17,6 +18,11 @@ export default {
   computed: {
     products: function() {
       return this.$root.$data.products;
+    }
+  },
+  methods: {
+    clear: function() {
+      this.$root.$data.products = [];
     }
   }
 };
